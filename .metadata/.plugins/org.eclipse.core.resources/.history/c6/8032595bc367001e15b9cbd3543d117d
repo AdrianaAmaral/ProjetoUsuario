@@ -1,0 +1,36 @@
+package projeto.usuario.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.MultiValueMap;
+
+import projeto.usuario.entity.Usuario;
+import projeto.usuario.entity.vo.UsuarioVO;
+import projeto.usuario.repository.UsuarioRepository;
+
+@Service
+public class UsuarioService {
+	
+	@Autowired
+	private UsuarioRepository usuarioRepository;
+	
+	@Transactional(rollbackFor = Throwable.class)
+	public UsuarioVO salvar(UsuarioVO usuarioVO) throws Exception {
+		Usuario usuario = passarDadosUsuario(usuarioVO);
+		usuarioRepository.save(usuario);
+        return new UsuarioVO(usuario);
+	}
+
+	private Usuario passarDadosUsuario(UsuarioVO usuarioVO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<Usuario> listarUsuarios() {
+		return usuarioRepository.findAll();
+	}
+
+}

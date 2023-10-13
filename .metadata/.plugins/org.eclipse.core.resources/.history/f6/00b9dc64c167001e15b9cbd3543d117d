@@ -1,0 +1,30 @@
+package projeto.usuario.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.util.MultiValueMap;
+
+import projeto.usuario.entity.vo.UsuarioVO;
+import projeto.usuario.repository.UsuarioRepository;
+
+@Service
+public class UsuarioService {
+	
+	@Autowired
+	private UsuarioRepository usuarioRepository;
+	
+	private void salvarUsuario() {
+		
+	}
+
+	public MultiValueMap<String, String> salvar(UsuarioVO usuarioVO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Object listarUsuarios() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

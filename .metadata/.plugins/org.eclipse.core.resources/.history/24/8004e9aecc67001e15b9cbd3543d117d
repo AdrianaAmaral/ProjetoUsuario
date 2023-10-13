@@ -1,0 +1,5 @@
+package projeto.usuario.config;
+
+public class DevConfig {
+
+}

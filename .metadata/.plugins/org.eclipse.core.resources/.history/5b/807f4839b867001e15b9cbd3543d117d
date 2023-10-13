@@ -1,0 +1,24 @@
+package projeto.usuario.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Data;
+
+@Data
+@Entity
+public class Usuario {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "seq_id_usuario")
+	@Column(name = "seq_usuario")
+	private Long id;
+
+	@Column(name = "nome")
+	private String nome;
+	
+	@Column(name = "senha")
+	private String senha;
+}

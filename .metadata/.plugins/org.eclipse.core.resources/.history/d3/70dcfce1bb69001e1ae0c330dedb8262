@@ -1,0 +1,17 @@
+package projeto.usuario.util;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import projeto.usuario.entity.vo.UsuarioVO;
+
+@Data
+@AllArgsConstructor
+public class RegrasSenhaVO {
+	
+	private Boolean resultado;
+	private List<String> mensagem = new ArrayList<>();
+
+}

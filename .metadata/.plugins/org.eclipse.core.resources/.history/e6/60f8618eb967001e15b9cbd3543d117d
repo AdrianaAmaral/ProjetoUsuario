@@ -1,0 +1,12 @@
+package projeto.usuario.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import projeto.usuario.service.UsuarioService;
+
+public class UsuarioController {
+	
+	@Autowired
+	private UsuarioService usuarioService;
+
+}

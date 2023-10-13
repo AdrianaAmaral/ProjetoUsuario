@@ -1,0 +1,5 @@
+package projeto.usuario.util;
+
+public class RegrasSenhaVO {
+
+}
